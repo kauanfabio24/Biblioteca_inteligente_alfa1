@@ -72,10 +72,10 @@ Para entrar, aperte A e depois B. Para sair, aperte B e depois A.
 
 ## Como a contagem funciona
 
-- A e depois B em até 4 segundos conta como entrada (+1).
-- B e depois A em até 4 segundos conta como saída (-1).
+- A e depois B em até 20 segundos (por conta do delay do sensor online "wokwi", mas normalmente seria 4 segundos), conta como entrada (+1).
+- B e depois A em até 20 segundos (por conta do delay do sensor online "wokwi", mas normalmente seria 4 segundos), conta como saída (-1).
 - O mesmo sensor duas vezes seguidas é descartado (a pessoa voltou no meio do caminho).
-- Se o segundo sensor não disparar em 4 segundos, nada é contado.
+- Se o segundo sensor não disparar em 20 segundos (por conta do delay do sensor online "wokwi", mas normalmente seria 4 segundos), nada é contado.
 - A contagem nunca fica negativa.
 - No painel: livre abaixo de 60%, moderado de 60% a 80% e lotado acima de 80%. Esses valores ficam em `api/src/main/resources/application.properties`.
 - Para criar um local novo, é só inserir uma linha na tabela `status_atual_biblioteca`. O painel mostra sozinho.
