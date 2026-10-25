@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "author": "Biblioteca Inteligente",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-esp32-devkit-v1", "id": "esp", "top": 0, "left": 0, "attrs": {} },
+    { "type": "wokwi-pushbutton", "id": "btnPrincipalA", "top": -110, "left": -140, "attrs": { "color": "green", "label": "Principal A (fora)" } },
+    { "type": "wokwi-pushbutton", "id": "btnPrincipalB", "top": -110, "left": -50, "attrs": { "color": "green", "label": "Principal B (dentro)" } },
+    { "type": "wokwi-pushbutton", "id": "btnSalaA", "top": -110, "left": 60, "attrs": { "color": "blue", "label": "Sala A" } },
+    { "type": "wokwi-pushbutton", "id": "btnSalaB", "top": -110, "left": 150, "attrs": { "color": "blue", "label": "Sala B" } },
+    { "type": "wokwi-pushbutton", "id": "btnTrocar", "top": -110, "left": 240, "attrs": { "color": "yellow", "label": "Trocar sala" } }
+  ],
+  "connections": [
+    [ "esp:TX0", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX0", "$serialMonitor:TX", "", [] ],
+    [ "btnPrincipalA:1.l", "esp:D12", "green", [ "v0" ] ],
+    [ "btnPrincipalA:2.l", "esp:GND.1", "black", [ "v0" ] ],
+    [ "btnPrincipalB:1.l", "esp:D13", "green", [ "v0" ] ],
+    [ "btnPrincipalB:2.l", "esp:GND.1", "black", [ "v0" ] ],
+    [ "btnSalaA:1.l", "esp:D14", "blue", [ "v0" ] ],
+    [ "btnSalaA:2.l", "esp:GND.1", "black", [ "v0" ] ],
+    [ "btnSalaB:1.l", "esp:D27", "blue", [ "v0" ] ],
+    [ "btnSalaB:2.l", "esp:GND.1", "black", [ "v0" ] ],
+    [ "btnTrocar:1.l", "esp:D26", "yellow", [ "v0" ] ],
+    [ "btnTrocar:2.l", "esp:GND.1", "black", [ "v0" ] ]
+  ],
+  "dependencies": {}
+}

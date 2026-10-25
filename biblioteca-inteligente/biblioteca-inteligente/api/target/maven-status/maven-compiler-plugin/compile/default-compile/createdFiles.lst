@@ -1,0 +1,13 @@
+br\edu\biblioteca\modelo\StatusAtual.class
+br\edu\biblioteca\modelo\TipoMovimentacao.class
+br\edu\biblioteca\dados\ResultadoEvento.class
+br\edu\biblioteca\dados\SensorEventoRequisicao.class
+br\edu\biblioteca\servico\LocalDesconhecidoExcecao.class
+br\edu\biblioteca\controlador\BibliotecaControlador.class
+br\edu\biblioteca\servico\OcupacaoServico$Pendente.class
+br\edu\biblioteca\AplicacaoBiblioteca.class
+br\edu\biblioteca\repositorio\StatusAtualRepositorio.class
+br\edu\biblioteca\modelo\MovimentacaoLog.class
+br\edu\biblioteca\dados\StatusResposta.class
+br\edu\biblioteca\repositorio\MovimentacaoLogRepositorio.class
+br\edu\biblioteca\servico\OcupacaoServico.class

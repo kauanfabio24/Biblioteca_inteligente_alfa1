@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Lotação da biblioteca em tempo real">
+  <title>Lotação da Biblioteca</title>
+  <link rel="stylesheet" href="estilo-painel.css">
+</head>
+<body>
+
+  <!-- Cabeçalho -->
+  <header class="cabecalho">
+    <div class="limite cabecalho-conteudo">
+      <div>
+        <h1>Biblioteca Central</h1>
+        <p class="data" id="data"></p>
+      </div>
+      <time class="relogio" id="relogio" aria-label="Horário atual"></time>
+    </div>
+  </header>
+
+  <!-- Conteúdo principal -->
+  <main class="limite conteudo">
+
+    <!-- Legenda -->
+    <p class="legenda">
+      Lotação em tempo real:
+      <span class="livre">Livre abaixo de 60%</span> ·
+      <span class="moderado">Moderado de 60% a 80%</span> ·
+      <span class="lotado">Lotado acima de 80%</span>
+    </p>
+
+    <!-- Alerta de lotação -->
+    <div class="alerta" id="alerta" role="alert" hidden>
+      Atenção: a biblioteca está com mais de 80% da capacidade ocupada.
+    </div>
+
+    <!-- Aviso de erro -->
+    <div class="aviso-erro" id="aviso-erro" role="status" hidden>
+      Não foi possível atualizar os dados. Exibindo a última informação recebida.
+    </div>
+
+    <!-- Lotação total -->
+    <section class="cartao total" aria-labelledby="titulo-total">
+      <div class="total-superior">
+        <div>
+          <p class="rotulo" id="titulo-total">Lotação total</p>
+          <p class="total-numero">
+            <strong id="total-ocupadas"></strong>
+            <span id="total-capacidade"></span>
+          </p>
+        </div>
+
+        <div class="total-grafico">
+          <div class="linha-texto">
+            <span>Ocupação</span>
+            <strong id="total-percentual"></strong>
+          </div>
+          <div class="barra barra-grande"><span id="barra-total"></span></div>
+          <div class="escala"><span>0%</span><span>50%</span><span>100%</span></div>
+        </div>
+
+        <span class="selo selo-grande" id="status-total"></span>
+      </div>
+
+      <div class="resumo">
+        <div><span>Disponível</span><strong class="livre" id="total-disponivel"></strong></div>
+        <div><span>Zonas lotadas</span><strong class="lotado" id="zonas-lotadas"></strong></div>
+        <div><span>Zonas livres</span><strong class="livre" id="zonas-livres"></strong></div>
+      </div>
+    </section>
+
+    <!-- Pisos e zonas -->
+    <section class="painel">
+      <aside class="cartao pisos">
+        <h2 class="rotulo">Por piso</h2>
+        <div id="lista-pisos"></div>
+      </aside>
+
+      <div class="zonas" id="lista-zonas"></div>
+    </section>
+
+  </main>
+
+  <!-- Script -->
+  <script src="script.js"></script>
+</body>
+</html>
