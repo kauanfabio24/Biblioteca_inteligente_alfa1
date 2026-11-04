@@ -90,16 +90,6 @@ O painel atualiza sozinho a cada 10 segundos.
 - A contagem nunca fica negativa.
 - No painel: livre abaixo de 60%, moderado de 60% a 80% e lotado acima de 80%.
 
-## Se algo não funcionar
-
-| Problema | O que fazer |
-|---|---|
-| `HTTP -1` no Monitor Serial | A API estava dormindo. Abra o site do Render no navegador, espere carregar e tente de novo. |
-| `Sem Wi-Fi: evento perdido` | Pare a simulação e inicie de novo. |
-| `HTTP 400` com "Local desconhecido" | As salas não foram criadas. Confira se a variável `SQL_INIT` está como `always` e faça um novo deploy. |
-| Painel não abre | No Render, abra o serviço e veja a aba **Logs** para achar o erro. Confira se `DB_URL`, `DB_USER` e `DB_PASSWORD` estão certos. |
-| Botões soltos no diagrama do Wokwi | Confira se cada botão tem um fio no pino certo (12, 13, 14, 27 e 26) e outro no GND. |
-
 ## Atualizar o projeto
 
-Sempre que você enviar uma mudança para o GitHub, o Render atualiza a API sozinho. Se isso não acontecer, abra o serviço no Render e clique em **Manual Deploy** e depois em **Deploy latest commit**.
+Sempre que tiver uma mudança no GitHub, o Render atualiza a API sozinho.
